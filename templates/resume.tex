@@ -1,0 +1,124 @@
+\documentclass[letterpaper,10pt]{article}
+
+% Packages
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{fontspec}
+
+% Colors
+\definecolor{teal}{HTML}{78BEBA}
+\definecolor{red}{HTML}{D35233}
+\definecolor{yellow}{HTML}{E7B225}
+\definecolor{blue}{HTML}{2C5AA0}
+\definecolor{black}{HTML}{111111}
+\definecolor{cream}{HTML}{FBF9E2}
+
+% Layout
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+% Section formatting
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\color{red}}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1 \vspace{-3pt}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-3pt}\item \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{\color{teal}#1} & \textcolor{blue}{\textit{#2}} \\
+\textit{\footnotesize#3} & \textit{\footnotesize #4} \\
+\end{tabular*}\vspace{-8pt}}
+\newcommand{\resumeEducationHeading}[4]{\vspace{-2pt}\item \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{\color{teal}#1} & \textcolor{blue}{\textit{#2}} \\
+\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-5pt}}
+\newcommand{\resumeProjectHeading}[2]{\item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\textbf{\color{teal}#1} & \textcolor{blue}{#2} \\
+\end{tabular*}\vspace{-7pt}}
+
+% List styles
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textcolor{black}{\textbf{{{ name }}}}} \\
+    \vspace{3pt}
+    {\Large \textcolor{teal}{UX Sound Designer}} \\
+    \vspace{10pt}
+    \textcolor{black}{
+    \href{mailto:{ { contact.email } }}{\faEnvelope\, { { contact.email } }} $|$ 
+    \href{tel:{ { contact.phone } }}{\faMobile\, { { contact.phone } }} $|$ 
+    \href{{{ contact.website }}}{\faGlobe\, { { contact.website } }} $|$ 
+    \href{{{ contact.portfolio }}}{\faFile\, { { contact.portfolio } }}
+    }
+\end{center}
+
+% Profile
+\section{PROFESSIONAL PROFILE}
+\vspace{3pt}
+{{ profile }}
+
+% Experience
+\section{PROFESSIONAL EXPERIENCE}
+\resumeSubHeadingListStart
+{% for exp in experience %}
+\resumeSubheading{{ exp.role }}{{ exp.company }}{{ exp.location }}{{ exp.period }}
+\resumeItemListStart
+{% for bullet in exp.bullets %}
+\resumeItem{{ bullet }}
+{% endfor %}
+\resumeItemListEnd
+{% endfor %}
+\resumeSubHeadingListEnd
+
+% Skills
+\section{TECHNICAL SKILLS}
+\vspace{1pt}
+\begin{tabular}{@{}>{\bfseries\color{teal}}l @{\hspace{4pt}} l}
+Audio Software & \textbf{Implementation:} {{ skills.audio_software }}; \
+& \textbf{DAWs:} {{ skills.daw }}; \\
+Development & \textbf{Scripting:} {{ skills.scripting }}; \textbf{Node-based:} {{ skills.node_based }} \\
+Sound Design & UI/UX sound design, Interactive audio implementation, Sound synthesis, \
+Specialties & {{ skills.specialties | join(', ') }} \\
+\end{tabular}
+
+% Education & Certifications
+\section{EDUCATION \& CERTIFICATIONS}
+\resumeSubHeadingListStart
+{% for edu in education %}
+\resumeEducationHeading{{ edu.institution }}{{ edu.degree }}{{ edu.location }}{{ edu.period }}
+{% endfor %}
+\resumeSubHeadingListEnd
+
+% Projects
+\section{PROJECTS}
+\resumeSubHeadingListStart
+{% for proj in projects %}
+\resumeProjectHeading{{ proj.title }}{}
+\resumeItemListStart
+\resumeItem{{ proj.description }}
+\resumeItemListEnd
+{% endfor %}
+\resumeSubHeadingListEnd
+
+\end{document}

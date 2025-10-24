@@ -1,0 +1,80 @@
+# resume.yaml
+
+name: Daniel Ramirez
+contact:
+  email: daniel@danialrami.com
+  phone: (714) 616-1558
+  linkedin: danialrami
+  github: danialramirez
+
+profile: |
+  Sound Designer specializing in interactive audio implementation and UX sound design for mobile applications. Experienced in creating cohesive sonic identities that enhance user engagement while providing clear feedback for interactions. Combines technical implementation skills with creative sound design to craft meaningful audio experiences.
+
+experience:
+  - company: LUFS Audio
+    role: Sound Designer
+    location: Remote
+    dates: "July 2024 – Present"
+    description:
+      - Lead sound designer for tech clients including Hinge Health and xAI
+      - Design and implement interaction sounds for mobile and web applications
+      - Develop scalable audio pipelines and workflows for product teams
+      - Create sonic identities aligned with brand values and user experience goals
+  - company: Hinge Health
+    role: Sound Designer (Contract)
+    location: San Francisco, CA
+    dates: "May 2022 – July 2024"
+    description:
+      - Designed interaction sounds for mobile health applications serving 70k+ daily users
+      - Collaborated with UX designers to map user journeys and identify key interaction points
+      - Built custom implementation pipelines using Wwise integrated with Unity
+      - Created a modular sound system with adaptive behaviors for different interaction types
+      - Implemented A/B testing framework that achieved 18% increase in user session duration
+      - Established scalable audio guidelines for engineering teams to implement independently
+  # Add remaining positions similarly...
+
+skills:
+  - category: Audio Software
+    list: [Wwise, FMOD]
+  - category: DAWs
+    list: [Pro Tools, Logic Pro X, Ableton Live]
+  - category: Game Engines
+    list: [Unity, Unreal Engine 5]
+  - category: Scripting
+    list: [Python, Lua]
+  - category: Node‑based
+    list: [Max/MSP, Pure Data, Metasounds]
+  - category: Specialties
+    list: [Audio pipeline development, Adaptive sound behaviors, User testing]
+
+education:
+  - school: NYU Steinhardt
+    location: New York, NY
+    degree: B.M. Music Theory and Composition for Film and Multimedia
+    dates: "2015–2019"
+  - school: IRCAM
+    location: Paris, France
+    degree: Sound Spatialization and Synthesis
+    dates: 2017
+
+certifications:
+  - name: Wwise‑101
+    link: https://example.com/wwise-101
+  - name: Wwise‑201
+    link: https://example.com/wwise-201
+  - name: Unreal Engine 5
+    link: https://example.com/unreal-5
+  - name: Max/MSP
+    link: https://example.com/max-msp
+
+projects:
+  - name: Mobile App Sound Design
+    description:
+      - Created cohesive sonic identity for health tech mobile application with brand‑aligned sound palette.
+  - name: Interactive Audio Experience
+    description:
+      - Designed immersive audio for spatial computing prototype using directional awareness cues.
+  - name: Audio Pipeline Automation
+    description:
+      - Developed Python‑based tools for audio asset management and pipeline automation.
+
